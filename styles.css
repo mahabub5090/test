@@ -64,6 +64,8 @@ body {
   position: fixed;
   top: 10%;
   left: 10%;
+  margin: 25% 40%;
+ 
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -192,4 +194,16 @@ button {
   .card {
     flex-direction: column;
   }
+}
+
+@media only screen and (min-width: 701px) and (max-width:1600px){
+#histories{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-content: space-evenly;
+    }
+    .card{
+      flex-direction: column;}
+
 }
