@@ -46,6 +46,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount = errorCount + 1;
   }
 
   // check if given question text is equal to user typed text
@@ -80,7 +81,7 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${(timeTaken)}</span> seconds</p>
+    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
@@ -121,11 +122,10 @@ const start = () => {
     }
     count--;
   }, 1000);
-  
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+document.getElementById('start').addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
@@ -135,6 +135,6 @@ setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
 
-
-  document.getElementById("show-time").innerHTML = `${parseInt(startTime ? timeSpent : 0)} seconds`;
+ 
+  document.getElementById("show-time").innerHTML = `${parseInt( startTime? timeSpent: 0 )} Seconds`;
 }, 1000);
