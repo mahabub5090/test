@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- ==========BOOTSTRAP============ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <!-- ===========================NAV====================== -->
+    <!-- As a link -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid  bg-primary ">
+            <a class="navbar-brand mx-auto mb-0 fs-1 bold text-light " href="index.html"><i>Home</i></a>
+        </div>
+    </nav>
+
+    <!-- ============================================= -->
+    <!-- ================================Blog================ -->
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    What are the Differences between Local Storage and Session Storage?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The read-only sessionStorage property accesses a session Storage object for
+                    the current origin. sessionStorage is
+                    similar to localStorage; the difference is that while data in localStorage doesn't expire, data in
+                    sessionStorage is
+                    cleared when the page session ends.
+
+                    Whenever a document is loaded in a particular tab in the browser, a unique page session gets created
+                    and assigned to
+                    that particular tab. That page session is valid only for that particular tab.
+                    A page session lasts as long as the tab or the browser is open, and survives over page reloads and
+                    restores.
+                    Opening a page in a new tab or window creates a new session with the value of the top-level browsing
+                    context, which
+                    differs from how session cookies work.
+                    Opening multiple tabs/windows with the same URL creates sessionStorage for each tab/window.
+                    Duplicating a tab copies the tab's sessionStorage into the new tab.
+                    Closing a tab/window ends the session and clears objects in sessionStorage.
+                    Data stored in sessionStorage is specific to the protocol of the page. In particular, data stored by
+                    a script on a site
+                    accessed with HTTP (e.g., http://example.com) is put in a different sessionStorage object from the
+                    same site accessed
+                    with HTTPS (e.g., https://example.com).
+
+                    The keys and the values are always in the UTF-16 string format, which uses two bytes per character.
+                    As with objects,
+                    integer keys are automatically converted to strings.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    What is the local and global scope in JavaScript?
+
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The scope of a variable is the region of your program in which it is
+                    defined. JavaScript variables have only two scopes.
+
+                    Global Variables − A global variable has a global scope which means it can be defined anywhere in
+                    your JavaScript code.
+
+                    Local Variables − A local variable will be visible only within a function where it is defined.
+                    Function parameters are
+                    always local to that function.
+
+                    Within the body of a function, a local variable takes precedence over a global variable with the
+                    same name. If you
+                    declare a local variable or function parameter with the same name as a global variable, you
+                    effectively hide the global
+                    variable.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    What is the event loop in JavaScript?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The event loop
+                    JavaScript has a runtime model based on an event loop, which is responsible for executing the code,
+                    collecting and
+                    processing events, and executing queued sub-tasks. This model is quite different from models in
+                    other languages like C
+                    and Java.
+
+                    Runtime concepts
+                    The following sections explain a theoretical model. Modern JavaScript engines implement and heavily
+                    optimize the
+                    described semantics.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    How many times we get undefind in JavaScript ?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">JavaScript uses the undefined value in the following situations.
+
+                    1) Accessing an uninitialized variable
+                    When you declare a variable and don’t initialize it to a value, the variable will have a value of
+                    undefined. For
+                    example:
+
+                    let counter;
+                    console.log(counter); // undefined
+                    Code language: JavaScript (javascript)
+                    It’s a good practice to always initialize a variable whenever possible. In this example, you can
+                    initialize the counter
+                    variable to zero, like this:
+
+                    let counter = 0;
+                    console.log(counter); // 0
+                    Code language: JavaScript (javascript)
+                    2) Accessing a non-existing property of an object
+                    If you access a non-existing property of an object, you’ll get undefined. For example:
+
+                    let counter = {
+                    current: 0
+                    };
+                    console.log(counter.max); // undefined
+                    Code language: JavaScript (javascript)
+                    In this example, the counter object has one property current. Accessing the max property that
+                    doesn’t exist on the
+                    counter object returns undefined.
+
+                    It’s good practice to check if the property exists before accessing it. JavaScript provides you with
+                    some ways to do so.
+
+                    And the most common way to verify whether the object has a property is to use the in operator:
+
+                    'propertyName' in objectName
+                    Code language: JavaScript (javascript)
+                    Note that you need to surround the property name of the object with single or double-quotes.
+
+                    The following example uses the in operator to check if the max property exists on the counter object
+                    before accessing
+                    it:
+
+                    let counter = {
+                    current: 0
+                    };
+
+                    if('max' in counter) {
+                    console.log(counter.max);
+                    }
+                    Code language: JavaScript (javascript)
+                    If you want to assign a default value when the property of an object doesn’t exist, you can use the
+                    nullish coalescing
+                    operator (??):
+
+                    const propValue = object.propName ?? defaultValue;
+                    Code language: JavaScript (javascript)
+                    In this syntax, the nullish coalesing operator (??) returns the defaultValue if the object.propName
+                    is undefined or
+                    null.
+
+                    Note that the nullish coalescing operator has been available since ECMAScript 2020.
+
+                    let counter = { current: 0 };
+                    const max = counter.max ?? 100;
+                    Code language: JavaScript (javascript)
+                    3) Function parameters
+                    When you call a function with a number of parameters, you often pass the same number of arguments.
+                    For example:
+
+                    const formatCurrency = (amount, currency) => {
+                    return currency === '$' ?
+                    `$${amount}`: `${amount} ${currency}`;
+                    }
+                    Code language: JavaScript (javascript)
+                    The formatCurrency() function has two parameters. When calling it, you can pass two arguments like
+                    this:
+
+                    formatCurrency(100,'$'); // $100
+                    Code language: JavaScript (javascript)
+                    And it returned $100 as expected.
+
+                    But when you call the formatCurrency() function and don’t pass all the arguments, the parameters
+                    inside the function
+                    becomes undefined. For example:
+
+                    formatCurrency(100); // 100 undefined
+                    Code language: JavaScript (javascript)
+                    To avoid this situation, you can set a default value for the function parameters like this:
+
+                    const formatCurrency = (amount, currency = '$') => {
+                    return currency === '$' ?
+                    `$${amount}`: `${amount} ${currency}`;
+                    }
+                    Code language: JavaScript (javascript)
+                    And when calling it without passing the second argument, you’ll get a proper value:
+
+                    formatCurrency(100); // $100
+                    Code language: JavaScript (javascript)
+                    4) Functions return a value
+                    A function that doesn’t have a return statement implicitly returns undefined. For example:
+
+                    const log = (message) => {
+                    const time = (new Date()).toLocaleTimeString();
+                    console.log(`${time}: ${message}`);
+                    };
+
+                    const result = log('Hi');
+                    console.log(result); // undefined
+                    Code language: JavaScript (javascript)
+                    Likewise, when a function has a return statement without an expression, it also returns undefined.
+                    For example:
+
+                    const add = (a,b) => {
+                    const result = a + b;
+                    return;
+                    }
+
+                    let result = add(10,20);
+                    console.log(result); // undefined
+                    Code language: JavaScript (javascript)
+                    Consider the following example:
+
+                    const add = (a,b) => {
+                    return
+                    a + b;
+                    };
+
+                    let result = add(10,20);
+                    console.log(result); // undefined
+                    Code language: JavaScript (javascript)
+                    The add() function returns undefined. It should have returned 30 instead.
+
+                    The problem is that when you create a new line between the return keyword and the returned
+                    expression ( a + b ),
+                    Javascript compiler automatically inserts a semicolon (;) before the new line. This feature is
+                    called automatic
+                    semicolon insertion (ASI) in JavaScript.
+
+                    The add() function will look like the following to the JavaScript compiler:
+
+                    const add = (a,b) => {
+                    return;
+                    a + b;
+                    };
+                    Code language: JavaScript (javascript)
+                    That’s why you get the undefined as the return result.
+
+                    5) Accessing out-of-bounds array elements
+                    When you access an array element that is out-of-bounds, you’ll get the undefined value. For example:
+
+                    const colors = ['red', 'green', 'blue'];
+                    console.log(colors[3]); // undefined
+                    Code language: JavaScript (javascript)
+                    In this example, the colors array doesn’t have any element at index 3. Therefore, the colors[3]
+                    returns undefined.
+
+                    Summary
+                    The undefined is a primitive type that has a single value undefined.
+                    Accessing an uninitialized variable returns undefined.
+                    Accessing a non-existing property of an object returns undefined.
+                    Accessing a out-of-bounds array element returns undefined.
+                    A function without a return statement or with a return statement but without an expression returns
+                    undefined.
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- =============BOOTSTRAP========= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
